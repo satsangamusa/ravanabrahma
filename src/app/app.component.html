@@ -1,0 +1,67 @@
+<ion-app>
+  <ion-split-pane contentId="main-content">
+    <ion-menu contentId="main-content" type="overlay">
+      <ion-content>
+        <ion-list id="inbox-list">
+          <ion-row>
+            <ion-col class="ion-text-center">
+              <img width="180px" src="assets/img/rbdbs-logo.png">
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+             <ion-item   routerLink="/{{this.global.languageGate}}"
+             (click)="global.mainItem=-2"
+             [class.selected]="global.mainItem == -2 "
+             lines="none" detail="false">
+             <ion-icon name='information' style="color:royalblue"></ion-icon>&nbsp;
+             <ion-label><b> {{this.global.language}} </b></ion-label>
+           </ion-item>
+            </ion-col>
+          </ion-row>
+           <ion-row>
+             <ion-col>
+              <ion-item   routerLink="/{{this.global.menu[0].language}}"
+              (click)="global.mainItem=-1"
+              [class.selected]="global.mainItem == -1 "
+              lines="none" detail="false">
+              <ion-icon name='home' style="color:royalblue"></ion-icon>&nbsp;
+              <ion-label><b> {{this.global.home}} </b></ion-label>
+            </ion-item>
+             </ion-col>
+           </ion-row>
+          <ion-row *ngFor="let mi of global.menu;let i = index">
+            <ion-col>
+              <ion-item *ngIf="mi.subs" (click)="global.mainItem = i;global.selectedItem=-1;sm=sm==1?0:1" lines="none"
+                detail="false" [class.selected]="global.mainItem == i ">
+                <ion-icon [name]="mi.icon"></ion-icon>&nbsp;
+                <ion-label><b>{{mi.title}}</b></ion-label>
+              </ion-item>
+              <ion-item *ngIf="mi.subs==null" [routerLink]="[mi.language+'/'+mi.pathName]" [queryParams]="{itemNumber:mi.itemNumber}" (click)="global.mainItem = i;global.selectedItem=-1;sm=sm==1?0:1" lines="none"
+                detail="false" [class.selected]="global.mainItem == i ">
+                <ion-icon [name]="mi.icon"></ion-icon>&nbsp;
+                <ion-label><b>{{mi.title}}</b></ion-label>
+              </ion-item>
+              <div *ngIf="global.mainItem == i && sm==1">
+                <ion-row *ngFor="let s of mi.subs;let j = index">
+                  <ion-col style="margin-left:5px">
+
+                    <ion-item  routerLink="/{{mi.language}}/{{mi.pathName}}" (click)="global.selectedItem = j;global.subItem=-1; sh=sh==1?0:1"
+                      lines="none" detail="false" [class.selected]="global.selectedItem == j && global.mainItem == i ">
+                      <ion-icon name='document-text' style="color:royalblue"></ion-icon>&nbsp;
+                      <ion-label><b>{{ s.title }}</b></ion-label>
+                    </ion-item>
+
+                  </ion-col>
+                </ion-row>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-list>
+         
+      </ion-content>
+    </ion-menu>
+
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

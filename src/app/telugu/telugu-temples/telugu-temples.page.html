@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-toggle>
+        <ion-button>
+          <ion-icon slot="icon-only" name="menu"></ion-icon>
+        </ion-button>
+      </ion-menu-toggle>
+      <img src="assets/img/devudimudra.png" height="60">
+    </ion-buttons>
+    <ion-title class="ion-text-center" style="font-size: 17px;"><b>భగవాన్<br>రావణ బ్రహ్మ</b></ion-title>
+
+    <ion-buttons slot="end">
+      <img src="assets/img/rbdbs-logo.png" height="60">
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-row>
+    <ion-col class="ion-text-center">
+      <h1>రావణ బ్రహ్మ దేవాలయములు</h1>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <swiper [spaceBetween]="30" [effect]="'fade'" [navigation]="true" [pagination]="{
+      
+    clickable: true
+  }" class="mySwiper">
+        <ng-template swiperSlide *ngFor="let t of temples">
+          <ion-card>
+            <ion-row>
+              <ion-col>
+                <img [src]="t.img" height="100%" />
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col>
+                <br>
+                <b>{{t.text}}</b>
+              </ion-col>
+            </ion-row>
+          </ion-card>
+        </ng-template>
+      </swiper>
+
+    </ion-col>
+  </ion-row>
+
+</ion-content>

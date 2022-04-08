@@ -1,0 +1,90 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-toggle>
+        <ion-button>
+          <ion-icon slot="icon-only" name="menu"></ion-icon>
+        </ion-button>
+      </ion-menu-toggle>
+      <img src="assets/img/devudimudra.png" height="60">
+    </ion-buttons>
+    <ion-title class="ion-text-center" style="font-size: 17px;"><b>Bhagavan</b><br><b>Ravana Brahma</b></ion-title>
+
+    <ion-buttons slot="end">
+      <img src="assets/img/rbdbs-logo.png" height="60">
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-content-color">
+  <!-- 
+  <ion-row>
+    <ion-col><br></ion-col>
+  </ion-row>
+
+  <ion-row *ngIf="this.global.currentPage<=150">
+    <ion-col class="ion-text-center" >
+        <span class="align-icon" style="font-size:30px;" *ngIf="this.global.currentPage>0" (click)="this.global.currentPage=this.global.currentPage-1" >☜</span>
+        &nbsp; <b><span style="font-size:20px"> {{this.global.bible[this.global.currentPage].chapterName}}</span></b>&nbsp;
+        <ion-icon name="settings-outline" (click)="openSettings()" class="align-icon"></ion-icon>
+        &nbsp;
+        <span class="align-icon" style="font-size:30px;" *ngIf="this.global.currentPage<=149" (click)="this.global.currentPage=this.global.currentPage+1" >☞</span>
+        
+    </ion-col>
+  </ion-row>
+
+  
+ 
+
+  <ion-row >
+    <ion-col>
+      <p *ngIf="this.global.currentPage==150">
+      <span [innerHTML]="this.global.bible[this.global.currentPage].pageText | safe:'html'"> </span>
+    </p>
+      <ion-card class="custom-card" [ngStyle]="{'font-size':this.global.fontSize+'px'}" *ngIf="this.global.currentPage!=150">
+          <ion-row *ngIf="this.global.bible[this.global.currentPage].videoId!=null && this.global.networkStatus=='ONLINE' ">
+            
+            <ion-col class="ion-text-center">
+              <div class="viditem">
+                <a class="vid-img-container">
+                  <iframe class="vidimg"  height="310" [src]="this.global.bible[this.global.currentPage].videoId | safe:'resourceUrl'"
+                   allowfullscreen></iframe>
+                </a>
+              </div>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <span [innerHTML]="this.global.bible[this.global.currentPage].verse | safe:'html'"> </span>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <span [innerHTML]="this.global.bible[this.global.currentPage].meaning | safe:'html'"> </span>
+
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <span [innerHTML]="this.global.bible[this.global.currentPage].pageText | safe:'html'"> </span>
+
+
+            </ion-col>
+          </ion-row>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col class="ion-text-right" >
+        <span class="align-icon" style="font-size:30px;margin-right:8px;color:gold;" 
+        *ngIf="this.global.currentPage<150" 
+        (click)="goToTop()" >☞</span>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+    <br>
+    </ion-col>
+  </ion-row>
+-->
+</ion-content>

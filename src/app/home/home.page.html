@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-toggle>
+        <ion-button>
+          <ion-icon slot="icon-only" name="menu"></ion-icon>
+        </ion-button>
+      </ion-menu-toggle>
+      <img src="assets/img/devudimudra.png" height="60">
+    </ion-buttons>
+    <ion-title class="ion-text-center" style="font-size: 17px;"><b>Bhagavan<br>Ravana Brahma</b></ion-title>
+
+    <ion-buttons slot="end">
+      <img src="assets/img/rbdbs-logo.png" height="60">
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+  <ion-content class="ion-content-color">
+    <ion-slides [options]="slideOptions" pager="true" #slider (ionSlidesDidLoad)="slidesDidLoad(slider)">
+      <ion-slide *ngFor="let img of data">
+        <img [src]="img">
+      </ion-slide>
+    </ion-slides>
+     </ion-content>
+     

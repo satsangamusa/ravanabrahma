@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-toggle>
+        <ion-button>
+          <ion-icon slot="icon-only" name="menu"></ion-icon>
+        </ion-button>
+      </ion-menu-toggle>
+      <img src="assets/img/devudimudra.png" height="60">
+    </ion-buttons>
+    <ion-title class="ion-text-center" style="font-size: 17px;"><b>Bhagavan</b><br><b>Ravana Brahma</b></ion-title>
+    <ion-buttons slot="end">
+      <img src="assets/img/rbdbs-logo.png" height="60">
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-content-color">
+
+  <ion-grid>
+
+<ion-row *ngFor="let vd of videos">
+  
+   <ion-col>
+
+    <a class="vid-img-container" (click)="openWisdomVideo(vd.id)">
+      <img class="playimg" src="/assets/images/playbutton.png">
+
+      <img class="vidimg" src="http://img.youtube.com/vi/{{vd.id}}/hqdefault.jpg">
+    </a>
+
+   </ion-col>
+  
+
+</ion-row>
+   
+
+
+  </ion-grid>
+</ion-content>
