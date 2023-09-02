@@ -13,7 +13,7 @@ export class EnglishAimsPage implements OnInit {
   constructor(public route: Router, public activatedRoute: ActivatedRoute,public _sanitizer: DomSanitizer,public englishGlobal:EnglishGlobalService) { 
     
   }
-  id: number;
+  id!: number;
   htmlContent:any;
   ngOnInit() {
     this.activatedRoute.queryParams.subscribe(params => {

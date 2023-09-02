@@ -11,7 +11,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class HindiAimsPage implements OnInit {
   constructor(public route: Router, public activatedRoute: ActivatedRoute, public _sanitizer: DomSanitizer, public hindiGlobal: HindiGlobalService) { }
   htmlContent: any = null;
-  id: number;
+  id!: number;
   ngOnInit() {
     this.activatedRoute.queryParams.subscribe(params => {
       this.id = params['itemNumber'];

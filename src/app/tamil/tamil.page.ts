@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TamilGlobalService } from './tamil-global.service';
-import { MenuController, IonSlides } from '@ionic/angular';
+import { MenuController, IonicSlides } from '@ionic/angular';
 import { GlobalService } from '../global.service';
 
 @Component({
@@ -9,6 +9,7 @@ import { GlobalService } from '../global.service';
   styleUrls: ['./tamil.page.scss'],
 })
 export class TamilPage implements OnInit {
+  swiperModules=[IonicSlides]
   slideOptions = {
     initialSlide: 1,
     speed: 200,
@@ -35,9 +36,7 @@ export class TamilPage implements OnInit {
     this.global.language="மொழியை மாற்றவும்"
     this.global.menu=this.tamilGlobal.menu;
   }
-  slidesDidLoad(slides: IonSlides) {
-    slides.startAutoplay();
-  }
+   
   data: any = [
     'assets/img/tamil/slides/1.png',
     'assets/img/tamil/slides/2.png',

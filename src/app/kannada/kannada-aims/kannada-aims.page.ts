@@ -14,7 +14,7 @@ export class KannadaAimsPage implements OnInit {
 
   constructor(public route: Router, public activatedRoute: ActivatedRoute, public _sanitizer: DomSanitizer, public kannadaGlobal: KannadaGlobalService) { }
   htmlContent: any = null;
-  id: number;
+  id!: number;
   ngOnInit() {
     this.activatedRoute.queryParams.subscribe(params => {
       this.id = params['itemNumber'];

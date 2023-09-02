@@ -7,13 +7,11 @@ import { IonicModule } from '@ionic/angular';
 import { TeluguContentPageRoutingModule } from './telugu-content-routing.module';
 
 import { TeluguContentPage } from './telugu-content.page';
-import { SwiperModule } from 'swiper/angular';
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    SwiperModule,
     TeluguContentPageRoutingModule
   ],
   declarations: [TeluguContentPage]

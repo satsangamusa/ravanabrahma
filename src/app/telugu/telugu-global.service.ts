@@ -235,51 +235,7 @@ export class TeluguGlobalService {
       },
       {
         text: ` 
-      <ion-row>
-      <ion-col class="ion-text-center">
-      <h1>రావణ బ్రహ్మ గురించి గ్రంథములు</h1>
-      </ion-col>
-      </ion-row>
-      <ion-row>
-      <ion-col class="ion-text-center">
-      <img  width="100%" src="assets/img/telugu/1.jpg" />  
-      </ion-col>
-      </ion-row>
-      <ion-row>
-      <ion-col class="ion-text-center">
-      <ion-button fill="outline" shape="round"><a href="https://www.ravanabrahmadravidabrahmanasangham.org/bookpdf/Tel_48_DravidaBrahmana.pdf">గ్రంథము తెరువుము</a> </ion-button>
-      </ion-col>
-      </ion-row>
-      <ion-row>
-      <ion-col class="ion-text-center">
-      <img  width="100%" src="assets/img/telugu/2.jpg" />  
-      </ion-col>
-      </ion-row>
-      <ion-row>
-      <ion-col class="ion-text-center">
-      <ion-button fill="outline" shape="round" click="http://www.ravanabrahmadravidabrahmanasangham.org/bookpdf/Brahma-Ravana%20Brahma-Bhagavan%20Ravana%20Brahma_Telugu%20WebBook.pdf"><a href="http://www.ravanabrahmadravidabrahmanasangham.org/bookpdf/Brahma-Ravana%20Brahma-Bhagavan%20Ravana%20Brahma_Telugu%20WebBook.pdf">గ్రంథము తెరువుము</a> </ion-button>
-      </ion-col>
-      </ion-row>
-      <ion-row>
-      <ion-col class="ion-text-center">
-      <img  width="100%" src="assets/img/telugu/3.jpg" />  
-      </ion-col>
-      </ion-row>
-      <ion-row>
-      <ion-col class="ion-text-center">
-      <ion-button fill="outline" shape="round" ><a href="https://www.ravanabrahmadravidabrahmanasangham.org/bookpdf/Tel_07_Thraithakara.pdf">గ్రంథము తెరువుము</a> </ion-button>
-      </ion-col>
-      </ion-row>
-      <ion-row>
-      <ion-col class="ion-text-center">
-      <img  width="100%" src="assets/img/telugu/4.jpg" />  
-      </ion-col>
-      </ion-row>
-      <ion-row>
-      <ion-col class="ion-text-center">
-      <ion-button fill="outline" shape="round" ><a href="https://thraithashakam.org/publications/telugu/pdf/Vedamulu-Manishiki-Avasarama.pdf">గ్రంథము తెరువుము</a> </ion-button>
-      </ion-col>
-      </ion-row>
+     
       `
       },
       {

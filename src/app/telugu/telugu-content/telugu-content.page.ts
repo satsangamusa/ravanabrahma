@@ -1,14 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { DomSanitizer, SafeHtml, SafeStyle, SafeScript, SafeUrl, SafeResourceUrl } from '@angular/platform-browser';
+import { DomSanitizer } from '@angular/platform-browser';
 import { TeluguGlobalService } from '../telugu-global.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { SwiperComponent } from "swiper/angular";
-
-// import Swiper core and required modules
-import SwiperCore, { EffectFade, Navigation, Pagination } from "swiper";
-
-// install Swiper modules
-SwiperCore.use([EffectFade, Navigation, Pagination]);
 
 @Component({
   selector: 'app-telugu-content',
@@ -21,7 +14,7 @@ export class TeluguContentPage implements OnInit {
   constructor(public route:Router,public activatedRoute:ActivatedRoute,public _sanitizer: DomSanitizer,public teluguGlobal:TeluguGlobalService) {
    }
   htmlContent:any=null;
-  id:number;
+  id!:number;
   async ngOnInit() {
     this.activatedRoute.queryParams.subscribe(params => {
       this.id=params['itemNumber'];

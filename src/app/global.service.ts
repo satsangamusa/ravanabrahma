@@ -14,7 +14,7 @@ export class GlobalService {
   public home:any="Home";
   public language="భాషను ఎన్నుకోండి"; 
   public languageGate="lg";
-  pages: Array<{ title: string, component: any }>;
+  pages!: Array<{ title: string, component: any }>;
   fontSize: number = 15;
   startPage: number = 0;
   endPage: number = 0;

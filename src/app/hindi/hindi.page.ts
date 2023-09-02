@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HindiGlobalService } from './hindi-global.service';
-import { MenuController, IonSlides } from '@ionic/angular';
+import { IonicSlides, MenuController } from '@ionic/angular';
 import { GlobalService } from '../global.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { GlobalService } from '../global.service';
   styleUrls: ['./hindi.page.scss'],
 })
 export class HindiPage implements OnInit {
-
+  swiperModules=[IonicSlides]
   slideOptions = {
     initialSlide: 1,
     speed: 200,
@@ -37,9 +37,7 @@ export class HindiPage implements OnInit {
     this.global.home="गृह";
     
   }
-  slidesDidLoad(slides: IonSlides) {
-    slides.startAutoplay();
-  }
+  
   data: any = [
     'assets/img/hindi/slides/1.png',
     'assets/img/hindi/slides/2.png',

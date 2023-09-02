@@ -128,32 +128,7 @@ export class KannadaGlobalService {
       text: ``
     },
     {
-      text: ` 
-    <ion-row>
-    <ion-col class="ion-text-center">
-    <h1>ರಾವಣ ಬ್ರಹ್ಮ ಕುರಿತು  ಬಗ್ಗೆ ಗ್ರಂಥಗಳು</h1>
-    </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col class="ion-text-center">
-      <img  width="100%" src="assets/img/kannada/1.jpg" />  
-      </ion-col>
-      </ion-row>
-      <ion-row>
-      <ion-col class="ion-text-center">
-      <ion-button fill="outline" shape="round"><a href="https://www.ravanabrahmadravidabrahmanasangham.org/bookpdf/Kan_26_DhravidaBrahmana.pdf">ಗ್ರಂಥವನ್ನು ತೆರೆಯಿರಿ</a> </ion-button>
-      </ion-col>
-      </ion-row>
-      <ion-row>
-      <ion-col class="ion-text-center">
-      <img  width="100%" src="assets/img/kannada/2.jpg" />  
-      </ion-col>
-      </ion-row>
-      <ion-row>
-      <ion-col class="ion-text-center">
-      <ion-button fill="outline" shape="round"><a href="https://www.ravanabrahmadravidabrahmanasangham.org/bookpdf/Kan_21_ThraithakaraRahasyam.pdf">ಗ್ರಂಥವನ್ನು ತೆರೆಯಿರಿ</a> </ion-button>
-      </ion-col>
-      </ion-row>
+      text: `
        
     `
     }    

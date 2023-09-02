@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TeluguGlobalService } from './telugu-global.service';
-import { IonSlides, MenuController } from '@ionic/angular';
+import { IonicSlides, MenuController } from '@ionic/angular';
 import { GlobalService } from '../global.service';
 
 @Component({
@@ -9,9 +9,10 @@ import { GlobalService } from '../global.service';
   styleUrls: ['./telugu.page.scss'],
 })
 export class TeluguPage implements OnInit {
+  swiperModules = [IonicSlides];
   slideOptions = {
     initialSlide: 1,
-    speed: 200,
+    speed: 400,
   };
   value: any = 1;
   constructor(public teluguGlobal: TeluguGlobalService,public menuCtrl:MenuController, 
@@ -35,9 +36,7 @@ export class TeluguPage implements OnInit {
     this.global.language="భాషను మార్చండి"
     this.global.menu=this.teluguGlobal.menu;
   }
-  slidesDidLoad(slides: IonSlides) {
-    slides.startAutoplay();
-  }
+  
   data: any = [
     'assets/img/slides/1.png',
     'assets/img/slides/2.png',

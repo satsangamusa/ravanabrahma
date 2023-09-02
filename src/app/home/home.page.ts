@@ -1,6 +1,6 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { GlobalService } from 'src/app/global.service';
-import { NavParams, ModalController, IonSlides } from '@ionic/angular';
+import {  IonicSlides } from '@ionic/angular';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +8,7 @@ import { NavParams, ModalController, IonSlides } from '@ionic/angular';
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage implements OnInit {
-
+  swiperModules=[IonicSlides];
   slideOptions = {
     initialSlide: 1,
     speed: 200,
@@ -21,9 +21,7 @@ export class HomePage implements OnInit {
   ionViewDidEnter() {
 
   }
-  slidesDidLoad(slides: IonSlides) {
-    slides.startAutoplay();
-  }
+  
   data: any = [
     'assets/img/1.png',
     'assets/img/2.png',

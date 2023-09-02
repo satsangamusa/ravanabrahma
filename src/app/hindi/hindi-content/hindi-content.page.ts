@@ -12,7 +12,7 @@ export class HindiContentPage implements OnInit {
 
   constructor(public route: Router, public activatedRoute: ActivatedRoute, public _sanitizer: DomSanitizer, public hindiGlobal: HindiGlobalService) { }
   htmlContent: any = null;
-  id: number;
+  id!: number;
   ngOnInit() {
     this.activatedRoute.queryParams.subscribe(params => {
       this.id = params['itemNumber'];

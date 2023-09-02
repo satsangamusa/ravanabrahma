@@ -16,7 +16,7 @@ export class LanguageGatePage implements OnInit {
   ionViewDidEnter(){
     this.menuCtrl.enable(false);
   }
-  selectLanguage(language){
+  selectLanguage(language:any){
     console.log(' The selected language', language);
     this.router.navigateByUrl(language);
   }

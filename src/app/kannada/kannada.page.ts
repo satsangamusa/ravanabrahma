@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { KannadaGlobalService } from './kannada-global.service';
-import { MenuController, IonSlides } from '@ionic/angular';
+import { IonicSlides, MenuController } from '@ionic/angular';
 import { GlobalService } from '../global.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { GlobalService } from '../global.service';
   styleUrls: ['./kannada.page.scss'],
 })
 export class KannadaPage implements OnInit {
- 
+  swiperModules=[IonicSlides]
   slideOptions = {
     initialSlide: 1,
     speed: 200,
@@ -37,9 +37,7 @@ export class KannadaPage implements OnInit {
     this.global.menu=this.kannadaGlobal.menu;
 
   }
-  slidesDidLoad(slides: IonSlides) {
-    slides.startAutoplay();
-  }
+  
   data: any = [
     'assets/img/kannada/slides/1.png',
     'assets/img/kannada/slides/2.png',

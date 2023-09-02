@@ -140,31 +140,6 @@ Our Mission is to:  </h1>
       },
       {
         text: ` 
-      <ion-row>
-      <ion-col class="ion-text-center">
-      <h1>Scriptures About Bhagavan Ravana Brahma</h1>
-      </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col class="ion-text-center">
-        <img  width="100%" src="assets/img/english/1.jpg" />  
-        </ion-col>
-        </ion-row>
-        <ion-row>
-        <ion-col class="ion-text-center">
-        <ion-button fill="outline" shape="round"><a href="https://thraithashakam.org/publications/english/pdf/Dravida-Brahmana.pdf">Open PDF</a> </ion-button>
-        </ion-col>
-        </ion-row>
-        <ion-row>
-        <ion-col class="ion-text-center">
-        <img  width="100%" src="assets/img/english/2.jpg" />  
-        </ion-col>
-        </ion-row>
-        <ion-row>
-        <ion-col class="ion-text-center">
-        <ion-button fill="outline" shape="round"><a href="https://thraithashakam.org/publications/english/pdf/The-Secret-of-Bermuda-Triangle.pdf">Open PDF</a> </ion-button>
-        </ion-col>
-        </ion-row>
          
       `
       },{

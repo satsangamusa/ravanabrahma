@@ -1,14 +1,11 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { DomSanitizer, SafeHtml, SafeStyle, SafeScript, SafeUrl, SafeResourceUrl } from '@angular/platform-browser';
+import { Component, OnInit } from '@angular/core';
+import { DomSanitizer} from '@angular/platform-browser';
  
 import { ActivatedRoute, Router } from '@angular/router';
-import { SwiperComponent } from "swiper/angular";
 // import Swiper core and required modules
-import SwiperCore, { EffectFade, Navigation, Pagination } from "swiper";
 import { KannadaGlobalService } from '../kannada-global.service';
-
-// install Swiper modules
-SwiperCore.use([EffectFade, Navigation, Pagination]);
+import { IonicSlides } from '@ionic/angular';
+ 
 @Component({
   selector: 'app-kannada-temples',
   templateUrl: './kannada-temples.page.html',
@@ -16,7 +13,7 @@ SwiperCore.use([EffectFade, Navigation, Pagination]);
 })
 export class KannadaTemplesPage implements OnInit {
 
-  
+  swiperModules=[IonicSlides]
   constructor(public route: Router, public activatedRoute: ActivatedRoute, public _sanitizer: DomSanitizer, public kannadaGlobal: KannadaGlobalService) {
   }
 
@@ -27,55 +24,55 @@ export class KannadaTemplesPage implements OnInit {
   temples: any = [
     {
       img: 'assets/img/temples/1.jpg',
-      text: `శ్రీలంకలోని రావణ యెల్ల లో ఉన్న పురాతన భగవాన్ రావణ బ్రహ్మ దేవాలయము`
+      text: `ಶ್ರೀಲಂಕಾದ ರಾವಣ ಯೆಲ್ಲಾದಲ್ಲಿರುವ ಪ್ರಾಚೀನ ಭಗವಾನ್ ರಾವಣ ಬ್ರಹ್ಮ ದೇವಾಲಯ`
     },
     {
       img: 'assets/img/temples/2.jpg',
-      text: `ఆంధ్రప్రదేశ్ లోని మజ్జివలసలో గల భగవాన్ రావణ బ్రహ్మ దేవాలయము`
+      text: `ಆಂಧ್ರಪ್ರದೇಶದ ಮಜ್ಜಿವಲಸದಲ್ಲಿರುವ ರಾವಣ ಬ್ರಹ್ಮ ದೇವಾಲಯ`
     },
     {
       img: 'assets/img/temples/3.jpg',
-      text: `శ్రీలంకలోని రావణ యెల్ల లో గల భగవాన్ రావణ బ్రహ్మ దేవాలయము`
+      text: `ಶ್ರೀಲಂಕಾದ ರಾವಣ ಯೆಲ್ಲಾದಲ್ಲಿರುವ ಭಗವಾನ್ ರಾವಣ ಬ್ರಹ್ಮ ದೇವಾಲಯ`
     },
     {
       img: 'assets/img/temples/4.jpg',
-      text: `ఆంధ్రప్రదేశ్ లోని మజ్జివలసలో గల భగవాన్ రావణ బ్రహ్మ దేవాలయము`
+      text: `ಆಂಧ್ರಪ್ರದೇಶದ ಮಜ್ಜಿವಲಸದಲ್ಲಿರುವ ರಾವಣ ಬ್ರಹ್ಮ ದೇವಾಲಯ`
     },
     {
       img: 'assets/img/temples/5.jpg',
-      text: `మధ్యప్రదేశ్ లోని రావణగ్రం లో భగవాన్ రావణ బ్రహ్మ దేవాలయము`
+      text: `ಮಧ್ಯಪ್ರದೇಶದ ರಾವಣಗ್ರಾಮದಲ್ಲಿರುವ ರಾವಣ ಬ್ರಹ್ಮ ದೇವಾಲಯ`
     },
     {
       img: 'assets/img/temples/6.jpg',
-      text: `బాగల్ కోట్ లోని అయిహోల్ లో రావణ్ పహాడి గుహ దేవాలయము`
+      text: `ಬಾಗಲ್ ಕೋಟ್‌ನ ಐಹೊಳೆಯಲ್ಲಿರುವ ರಾವಣ ಪಹಾಡಿ ಗುಹಾ ದೇವಾಲಯ`
     },
     {
       img: 'assets/img/temples/7.jpg',
-      text: `రాజస్థాన్ లోని జోధ్ పూర్ లో గల భగవాన్ రావణ బ్రహ్మ దేవాలయము`
+      text: `ರಾಜಸ್ಥಾನದ ಜೋಧಪುರದಲ್ಲಿರುವ ರಾವಣ ಬ್ರಹ್ಮ ದೇವಾಲಯ`
     },
     {
       img: 'assets/img/temples/8.jpg',
-      text: `ఆంధ్రప్రదేశ్ లోని కాకినాడలో గల భగవాన్ రావణ బ్రహ్మ దేవాలయము`
+      text: `ಆಂಧ್ರಪ್ರದೇಶದ ಕಾಕಿನಾಡದಲ್ಲಿರುವ ರಾವಣ ಬ್ರಹ್ಮ ದೇವಾಲಯ`
     },
     {
       img: 'assets/img/temples/9.jpg',
-      text: `ఉత్తర ప్రదేశ్ లోని కాన్పూర్ లో గల భగవాన్ రావణ బ్రహ్మ దేవాలయము`
+      text: `ಉತ್ತರ ಪ್ರದೇಶದ ಕಾನ್ಪುರದಲ್ಲಿರುವ ರಾವಣ ಬ್ರಹ್ಮ ದೇವಾಲಯ`
     },
     {
       img: 'assets/img/temples/10.jpg',
-      text: `బిస్రాఖ్ లో భగవాన్ రావణ బ్రహ్మ మందిరం`
+      text: `ಬಿಸ್ರಾಖ್‌ನಲ್ಲಿರುವ ರಾವಣ ಬ್ರಹ್ಮ ಮಂದಿರ`
     },
     {
       img: 'assets/img/temples/11.jpg',
-      text: `హర్యానా లోని ఫరీదాబాద్ లోగల మహాత్మా రావణ మందిరము`
+      text: `ಹರಿಯಾಣದ ಫರಿದಾಬಾದ್‌ನಲ್ಲಿರುವ ಮಹಾತ್ಮ ರಾವಣ ದೇವಾಲಯ`
     },
     {
       img: 'assets/img/temples/12.jpg',
-      text: `పంజాబ్ లోని లూధియానాలో గల భగవాన్ రావణ బ్రహ్మ దేవాలయము`
+      text: `ಪಂಜಾಬ್‌ನ ಲುಧಿಯಾನದಲ್ಲಿರುವ ರಾವಣ ಬ್ರಹ್ಮ ದೇವಾಲಯ`
     },
     {
       img: 'assets/img/temples/13.jpg',
-      text: `మధ్యప్రదేశ్ లోని మండ్సౌర్ లోగల భగవాన్ రావణ బ్రహ్మ దేవాలయము`
+      text: `ಮಧ್ಯಪ್ರದೇಶದ  ಮನ್ಡಸೌರ್  ನಲ್ಲಿರುವ ರಾವಣ ಬ್ರಹ್ಮ ದೇವಾಲಯ`
     },
   ]
 }

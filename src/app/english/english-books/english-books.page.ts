@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { DomSanitizer } from '@angular/platform-browser';
 import { EnglishGlobalService } from '../english-global.service';
+import { Browser } from '@capacitor/browser';
 
 @Component({
   selector: 'app-english-books',
@@ -13,7 +14,7 @@ export class EnglishBooksPage implements OnInit {
   constructor(public route: Router, public activatedRoute: ActivatedRoute,public _sanitizer: DomSanitizer,public englishGlobal:EnglishGlobalService) { 
     
   }
-  id: number;
+  id!: number;
   htmlContent:any;
   ngOnInit() {
     this.activatedRoute.queryParams.subscribe(params => {
@@ -27,5 +28,7 @@ export class EnglishBooksPage implements OnInit {
     });
     this.htmlContent = this._sanitizer.bypassSecurityTrustHtml(this.englishGlobal.menuContent[this.id].text);
   }
-
+  openPdf(link:any){
+    Browser.open({url:link})
+  }
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { DomSanitizer } from '@angular/platform-browser';
 import { TamilGlobalService } from '../tamil-global.service';
+import { Browser } from '@capacitor/browser';
 
 @Component({
   selector: 'app-tamil-books',
@@ -12,12 +13,15 @@ export class TamilBooksPage implements OnInit {
   constructor(public route:Router,public activatedRoute:ActivatedRoute,public _sanitizer: DomSanitizer,public tamilGlobal:TamilGlobalService) {
   }
  htmlContent:any=null;
- id:number;
+ id!:number;
  ngOnInit() {
    this.activatedRoute.queryParams.subscribe(params => {
      this.id=params['itemNumber'];
    });
    this.htmlContent= this._sanitizer.bypassSecurityTrustHtml(this.tamilGlobal.menuContent[this.id].text);
+ }
+ openPdf(link:any){
+  Browser.open({url:link})
  }
  ionViewDidEnter(){
    this.activatedRoute.queryParams.subscribe(params => {

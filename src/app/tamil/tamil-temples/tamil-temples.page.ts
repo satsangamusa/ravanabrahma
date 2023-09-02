@@ -1,15 +1,12 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { DomSanitizer, SafeHtml, SafeStyle, SafeScript, SafeUrl, SafeResourceUrl } from '@angular/platform-browser';
+import { Component, OnInit } from '@angular/core';
+import { DomSanitizer, } from '@angular/platform-browser';
  
 import { ActivatedRoute, Router } from '@angular/router';
-import { SwiperComponent } from "swiper/angular";
-// import Swiper core and required modules
-import SwiperCore, { EffectFade, Navigation, Pagination } from "swiper";
+ 
 
 import { TamilGlobalService } from '../tamil-global.service';
-
-// install Swiper modules
-SwiperCore.use([EffectFade, Navigation, Pagination]);
+import { IonicSlides } from '@ionic/angular';
+ 
 
 @Component({
   selector: 'app-tamil-temples',
@@ -17,6 +14,8 @@ SwiperCore.use([EffectFade, Navigation, Pagination]);
   styleUrls: ['./tamil-temples.page.scss'],
 })
 export class TamilTemplesPage implements OnInit {
+
+  swiperModules = [IonicSlides];
 
   constructor(public route: Router, public activatedRoute: ActivatedRoute, public _sanitizer: DomSanitizer, 
     public tamilGlobal: TamilGlobalService) {

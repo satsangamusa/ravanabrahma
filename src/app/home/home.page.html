@@ -14,13 +14,26 @@
       <img src="assets/img/rbdbs-logo.png" height="60">
     </ion-buttons>
   </ion-toolbar>
-</ion-header>
+</ion-header>  
 
   <ion-content class="ion-content-color">
-    <ion-slides [options]="slideOptions" pager="true" #slider (ionSlidesDidLoad)="slidesDidLoad(slider)">
-      <ion-slide *ngFor="let img of data">
-        <img [src]="img">
-      </ion-slide>
-    </ion-slides>
+
+    <swiper-container [slidesPerView]="3" [loop]="true">
+      <swiper-slide>
+
+        <ng-template swiperSlide *ngFor="let img of data">
+          <ion-card>
+            <ion-row>
+              <ion-col>
+                <img [src]="img" height="100%" />
+              </ion-col>
+            </ion-row>
+          </ion-card>
+        </ng-template>
+
+      </swiper-slide>
+    </swiper-container>
+
+  
      </ion-content>
      

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EnglishGlobalService } from '../english/english-global.service';
-import { MenuController, IonSlides } from '@ionic/angular';
+import { MenuController, IonicSlides } from '@ionic/angular';
 import { GlobalService } from '../global.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { GlobalService } from '../global.service';
   styleUrls: ['./english.page.scss'],
 })
 export class EnglishPage implements OnInit {
-
+  swiperModules=[IonicSlides]
   slideOptions = {
     initialSlide: 1,
     speed: 200,
@@ -37,9 +37,7 @@ export class EnglishPage implements OnInit {
     this.global.menu=this.englishGlobal.menu;
 
   }
-  slidesDidLoad(slides: IonSlides) {
-    slides.startAutoplay();
-  }
+  
   data: any = [
     'assets/img/english/slides/1.png',
     'assets/img/english/slides/2.png',

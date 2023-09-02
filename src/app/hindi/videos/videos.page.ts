@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
-import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player/ngx';
+import { Browser } from '@capacitor/browser';
 
 @Component({
   selector: 'app-videos',
@@ -9,15 +9,15 @@ import { YoutubeVideoPlayer } from '@ionic-native/youtube-video-player/ngx';
 })
 export class VideosPage implements OnInit {
 
-  constructor(protected _sanitizer: DomSanitizer,public youtube:YoutubeVideoPlayer) { }
+  constructor(protected _sanitizer: DomSanitizer) { }
 
   ngOnInit() {
   }
   
-  openWisdomVideo(id){
-   
-    this.youtube.openVideo(id);
+  openWisdomVideo(id:any) {
+    Browser.open({url:'https://www.youtube.com/watch?v='+id})
   }
+
    
 
   videos: any = [

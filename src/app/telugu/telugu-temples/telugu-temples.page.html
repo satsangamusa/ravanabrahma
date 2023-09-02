@@ -23,26 +23,25 @@
   </ion-row>
   <ion-row>
     <ion-col>
-      <swiper [spaceBetween]="30" [effect]="'fade'" [navigation]="true" [pagination]="{
-      
-    clickable: true
-  }" class="mySwiper">
-        <ng-template swiperSlide *ngFor="let t of temples">
-          <ion-card>
-            <ion-row>
-              <ion-col>
-                <img [src]="t.img" height="100%" />
-              </ion-col>
-            </ion-row>
-            <ion-row>
-              <ion-col>
-                <br>
-                <b>{{t.text}}</b>
-              </ion-col>
-            </ion-row>
-          </ion-card>
-        </ng-template>
-      </swiper>
+      <swiper-container  [autoplay]="{delay:3500}" [loop]="true">
+        <swiper-slide *ngFor="let t of temples">
+
+            <ion-card>
+              <ion-row>
+                <ion-col>
+                  <img [src]="t.img" height="100%" />
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                  <br>
+                  <b>{{t.text}}</b>
+                </ion-col>
+              </ion-row>
+            </ion-card>
+
+        </swiper-slide>
+      </swiper-container>
 
     </ion-col>
   </ion-row>

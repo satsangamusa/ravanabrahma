@@ -17,10 +17,9 @@
 </ion-header>
 
   <ion-content class="ion-content-color">
-    <ion-slides [options]="slideOptions" pager="true" #slider (ionSlidesDidLoad)="slidesDidLoad(slider)">
-      <ion-slide *ngFor="let src of data">
-        <img width="100%" [src]="src">
-      </ion-slide>
-    </ion-slides>
+    <swiper-container [loop]="true" [autoplay]="{delay:3500}"  effect="flip">
+      <swiper-slide *ngFor="let i of data"> <img width="100%" [src]="i"></swiper-slide>
+    </swiper-container>
+ 
      </ion-content>
      

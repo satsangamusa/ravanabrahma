@@ -21,7 +21,7 @@
           </ion-row>
            <ion-row>
              <ion-col>
-              <ion-item   routerLink="/{{this.global.menu[0].language}}"
+              <ion-item   routerLink="/{{this.global.menu[0]?.language}}"
               (click)="global.mainItem=-1"
               [class.selected]="global.mainItem == -1 "
               lines="none" detail="false">
